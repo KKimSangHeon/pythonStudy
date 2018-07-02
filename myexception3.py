@@ -9,4 +9,4 @@ def divide(x, y):
         print("executing finally clause")
 
 
-print(divide(5, 3))
+print(divide(5, 0))

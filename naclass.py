@@ -17,9 +17,8 @@ class na(father, uncle):
         print("game")
 
 k = father()
-
 print(isinstance(k, father))
 print(isinstance(k, grandfather))
 
-kk=na()
+kk = na()
 kk.earnplay()
