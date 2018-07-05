@@ -25,3 +25,28 @@ import matplotlib.font_manager as fm
 font_list = fm.findSystemFonts(fontpaths=None, fontext='ttf')
 f = [f.name for f in fm.fontManager.ttflist]
 print(f)
+
+from collections import OrderedDict
+from IPython.display import (display, clear_output, YouTubeVideo)
+from ipywidgets import Dropdown
+
+dw = Dropdown(options=OrderedDict([('SciPy 2016', 'Ejh0ftSjk6g'), ('PyCon 2016', 'YgtL4S7Hrwo')]))
+
+from collections import OrderedDict
+from IPython.display import (display, clear_output, YouTubeVideo)
+from ipywidgets import Dropdown
+
+dw = Dropdown(options=OrderedDict([('SciPy 2016', 'Ejh0ftSjk6g'), ('PyCon 2016', 'YgtL4S7Hrwo')]))
+
+
+def on_value_change(name, val):
+    clear_output()
+    display(YouTubeVideo(val))
+
+
+dw.on_trait_change(on_value_change, 'value')
+dw.value = dw.options['SciPy 2016']
+
+display(dw)
+
+
