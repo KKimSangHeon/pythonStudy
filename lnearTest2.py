@@ -47,6 +47,3 @@ def on_value_change(name, val):
 dw.on_trait_change(on_value_change, 'value')
 dw.value = dw.options['SciPy 2016']
 display(dw)
-
-
-
